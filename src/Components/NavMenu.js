@@ -6,11 +6,14 @@ function NavMenu(){
     return(
         <div>
             <ul>
-                <li><NavLink to="">Home</NavLink>
+                <li><NavLink to="/">Home</NavLink>
                 </li>
-                <li>About</li>
-                <li>Projects</li>
-                <li>Contact</li> 
+                <li><NavLink to="/about">About</NavLink>
+                </li>
+                <li><NavLink to="/projects">Projects</NavLink>
+                </li>
+                <li><NavLink to="/contact">Contact</NavLink>
+                </li>
             </ul>
         </div>
     )
