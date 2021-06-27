@@ -16,7 +16,21 @@ ul{
     li{
         diplay:inline-block;
         border-raduis:8px;
-        transition:.3s ease background-color;
+        transition:0.3s ease background-color;;
+        &:hover{
+            background-color:var(--deep-black)
+        }
+    }
+    a{
+        display:inline-block;
+        font-family:"RobotoMono Reguler";
+        padding:1rem 2rem;
+        font-size:2rem;
+        color:var(--grey-1);
+        outline:none
+    }
+    .active{
+        color:var(--white)
     }
 }
 `;
