@@ -6,9 +6,11 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Projects from "./pages/Projects";
+
+
 export default function App() {
   return (
-    <>
+  <div>
       <Router>
          <NavMenu></NavMenu>
          <Switch>
@@ -19,7 +21,7 @@ export default function App() {
 
          </Switch>
       </Router>  
-    </>
+    </div>
   );
 }
 
