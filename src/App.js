@@ -1,28 +1,57 @@
+// import React from "react";
+// import './App.css';
+// import NavMenu from './Components/NavMenu';
+// import { BrowserRouter as Router, Route ,Switch} from "react-router-dom";
+// import Home from "./pages/Home";
+// import About from "./pages/About";
+// import Contact from "./pages/Contact";
+// import Projects from "./pages/Projects";
+
+
+// export default function App() {
+//   return (
+//   <div>
+//       <Router>
+//          <NavMenu></NavMenu>
+//          <Switch>
+//            <Route path="/about"> <About/></Route>
+//            <Route path="/projects"> <Projects/></Route>
+//            <Route path="/contact"> <Contact/></Route>
+//            <Route path="/"> <Home/></Route>
+
+//          </Switch>
+//       </Router>  
+//     </div>
+//   );
+// }
+
+
 import React from "react";
-import './App.css';
-import NavMenu from './Components/NavMenu';
-import { BrowserRouter as Router, Route ,Switch} from "react-router-dom";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import Projects from "./pages/Projects";
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import NavMenu from "./components/NavMenu";
+import About from "./components/pages/About";
+import Contact from "./components/pages/Contact";
+import Home from "./components/pages/Home";
+import Projects from "./components/pages/Projects";
 
-
-export default function App() {
+ 
+function App() {
   return (
-  <div>
+    <div className="App">
       <Router>
-         <NavMenu></NavMenu>
-         <Switch>
-           <Route path="/about"> <About/></Route>
-           <Route path="/projects"> <Projects/></Route>
-           <Route path="/contact"> <Contact/></Route>
-           <Route path="/"> <Home/></Route>
+        <NavMenu />
 
-         </Switch>
-      </Router>  
+        <Switch>
+          <Route path="/" exact ><Home /></Route>
+          <Route path="/about"><About /></Route>
+          <Route path="/projects"><Projects /></Route>
+          <Route path="/contact"><Contact /></Route>
+        </Switch>
+        
+      </Router>
+        
     </div>
   );
 }
 
-
+export default App;
