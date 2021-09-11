@@ -28,7 +28,6 @@
 
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import NavMenu from "./components/NavMenu";
 import About from "./components/pages/About";
 import Contact from "./components/pages/Contact";
 import Home from "./components/pages/Home";
@@ -39,7 +38,6 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <NavMenu />
 
         <Switch>
           <Route path="/" exact ><Home /></Route>
