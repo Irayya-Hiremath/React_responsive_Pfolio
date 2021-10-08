@@ -1,53 +1,28 @@
-// import React from "react";
-// import './App.css';
-// import NavMenu from './Components/NavMenu';
-// import { BrowserRouter as Router, Route ,Switch} from "react-router-dom";
-// import Home from "./pages/Home";
-// import About from "./pages/About";
-// import Contact from "./pages/Contact";
-// import Projects from "./pages/Projects";
-
-
-// export default function App() {
-//   return (
-//   <div>
-//       <Router>
-//          <NavMenu></NavMenu>
-//          <Switch>
-//            <Route path="/about"> <About/></Route>
-//            <Route path="/projects"> <Projects/></Route>
-//            <Route path="/contact"> <Contact/></Route>
-//            <Route path="/"> <Home/></Route>
-
-//          </Switch>
-//       </Router>  
-//     </div>
-//   );
-// }
-
-
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import About from "./components/pages/About";
-import Contact from "./components/pages/Contact";
-import Home from "./components/pages/Home";
-import Projects from "./components/pages/Projects";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import About from "./Components/About";
+import Home from "./Components/Home";
+import Education from "./Components/Education";
+// import Navbar from "./Components/Navbar";
 
- 
 function App() {
   return (
-    <div className="App">
+    <div>
+      
       <Router>
-
         <Switch>
-          <Route path="/" exact ><Home /></Route>
-          <Route path="/about"><About /></Route>
-          <Route path="/projects"><Projects /></Route>
-          <Route path="/contact"><Contact /></Route>
+          <Route exact path="/">
+            <Home />
+          </Route>
+
+          <Route exact path="/About">
+            <About />
+          </Route>
+          <Route  exact path="/Education">
+            <Education />
+          </Route>
         </Switch>
-        
       </Router>
-        
     </div>
   );
 }
